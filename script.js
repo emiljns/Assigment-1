@@ -6,7 +6,7 @@ function addTask() {
   if (taskText === "") return;
 
   let li = document.createElement("li");
-  li.classList.add("task-item"); // Custom class for styling
+  li.classList.add("task-item");
 
   li.innerHTML = `
     <span class="task-text">${taskText}</span>
@@ -27,8 +27,8 @@ function editTask(button) {
   let taskSpan = li.querySelector(".task-text");
   let currentText = taskSpan.textContent;
 
-  let newText = prompt("Edit task:", currentText); // Show a prompt to edit
+  let newText = prompt("Edit task:", currentText);
   if (newText !== null && newText.trim() !== "") {
-    taskSpan.textContent = newText; // Update task text
+    taskSpan.textContent = newText;
   }
 }
